@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Calculator</title>
+    <title>Set Your Heart Ablaze</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/rengoku_and_tanjiro.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Attendence Calculator</h1>
-    <form method="post" action="/">
-        <label for="classes_present">Enter number of classes you were present:</label>
-        <input type="number" name="classes_present" required><br><br>
-
-        <b><label for="total_classes">Enter total number of classes that are taken:</label></b>
-        <input type="number" name="total_classes" required><br><br>
-
-        <b><label for="target_attendance">Enter your target attendance:</label></b>
-        <input type="number" name="target_attendance" required><br><br>
-
-        <button type="submit">Calculate</button>
-        <hr>
-    </form>
-
-
-    {% if attendance %}
-        <p>Your current attendance is {{ attendance }}%</p>
-    {% endif %}
-
-    {% if result %}
-        <p>{{ result }}</p>
-    {% endif %}
+    <h1>SET YOUR HEART ABLAZE</h1>
+    <p>DESTRY the DISASTER</p>
 </body>
 </html>
