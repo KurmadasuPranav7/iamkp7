@@ -1,112 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kurmadasu Pranav - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f3f3f3;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #555;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 5px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .content {
-      padding: 20px;
-    }
-
-    .project {
-      margin-bottom: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .project h2 {
-      margin-top: 0;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindLocation</title>
 </head>
 <body>
-  <header>
-    <h1>Kurmadasu Pranav</h1>
-    <p>Electronics and Communication Engineering Student | Tech Enthusiast | Programmer</p>
-  </header>
+    <h1>HTML Geolocation</h1>
+    <p>Click the button to get your coordinates.</p>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <button onclick="getLocation()">Try It</button>
 
-  <div class="container">
-    <section id="about" class="content">
-      <h2>About Me</h2>
-      <p>I am Kurmadasu Pranav, pursuing my B.Tech in Electronics and Communication Engineering at VNRVJIET. I am a tech enthusiast eager to learn new technologies. I enjoy reviewing phones and laptops and also have a passion for programming.</p>
-    </section>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="final"></p>
+    <a href="https://wa.me/918074293521?text=Reached Nanna">Whatsapp Link</a>
+    <script>
+        let x = document.getElementById("demo");
+        let y = document.getElementById("demo2");
+        let g = document.getElementById("final");
+          
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            let latitude = position.coords.latitude;
+            let longitude = position.coords.longitude;
+            
+            x.innerHTML = latitude;
+            y.innerHTML = longitude;
 
-    <section id="projects" class="content">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Phone Review Website</h3>
-        <p>A website where I review the latest smartphones and provide insights on their features, performance, and value for money.</p>
-      </div>
-      <div class="project">
-        <h3>Laptop Review Blog</h3>
-        <p>A blog where I share detailed reviews and comparisons of various laptops, helping users make informed purchasing decisions.</p>
-      </div>
-    </section>
+            if ((Math.round(latitude) == 17 || Math.round(latitude) == 18)&& Math.round(longitude) == 78){
+                g.innerHTML = "YES";
+            }
+        }
+        
+    </script>
 
-    <section id="contact" class="content">
-      <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-      <p>Phone: +1234567890</p>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2024 Kurmadasu Pranav - Portfolio</p>
-  </footer>
 </body>
 </html>
