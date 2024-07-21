@@ -1,0 +1,49 @@
+.bg{
+    background-image: url(../images/ironman.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+h1{
+    color: rgb(195,154,100,255);
+    font-family: "Bebas Neue", sans-serif;
+      
+}
+
+h3{
+    color: #831c19;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.text{
+    padding: 150px;
+}
+
+
+.social{
+    padding-top: 30px;
+    color: #9a9ba2;
+    font-size: x-large;
+}
+
+i{
+    padding-right: 15px;
+    color: #9a9ba2;
+}
+
+i:hover{
+    color: #d0edfa;
+}
